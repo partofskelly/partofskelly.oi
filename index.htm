@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <div class="player">
+    <!--
+    <img id="cover" src="cover1.jpg" alt="Album Cover" />
+    -->
+    <h2 id="song-title"></h2>
+    <audio id="audio" src="song1.mp3s"></audio>
+   <!--
+    <img id="cover" src="cover2.jpg" alt="Album Cover" />
+    -->
+    <h2 id="song-title"></h2>
+    <audio id="audio" src="song2.mp3"></audio>
+  
+    <img id="cover" src="cover3.jpg" alt="Album Cover" />
+    <h2 id="song-title"></h2>
+    <audio id="audio" src="song3.mp3"></audio>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮️</button>
+  <button id="playPauseBtn" onclick="playPause()">▶️</button>
+  <button onclick="stopMusic()">⏹️</button>
+  <button onclick="nextSong()">⏭️</button>
+    </div>
+    <input
+  type="range"
+  id="progress"
+  value="0"
+  step="1"
+  min="0"
+  max="100"
+  onchange="setProgress()"
+/>
+</div>
+
+<!--  Volume Control -->
+<div class="volume-control">
+  <label for="volume">Volume</label>
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+</div>
+     <!-- Time -->
+<div class="time-display">
+  <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
